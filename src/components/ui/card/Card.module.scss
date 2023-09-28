@@ -1,0 +1,27 @@
+.card {
+	position: relative;
+	top: 24px;
+	left: -6px;
+	margin: 15px;
+	width: 180px;
+	height: 20px;
+	border-radius: 40px 50px;
+	transform: rotate(-0.005turn);
+	background-color: #6e468f;
+}
+
+.card2 {
+	color: #fff;
+	border-radius: 10px 10px 0 0;
+	height: 70px;
+	width: 200px;
+	background-color: black;
+	position: absolute;
+	> span {
+		position: relative;
+		top: 14px;
+		left: 20px;
+		font-size: 10px;
+		font-weight: 100;
+	}
+}
