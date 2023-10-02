@@ -1,27 +1,29 @@
-.card {
+.container {
+	display: flex;
+	justify-content: center;
+	padding: 6px;
 	position: relative;
-	top: 24px;
-	left: -6px;
-	margin: 15px;
-	width: 180px;
-	height: 20px;
-	border-radius: 40px 50px;
-	transform: rotate(-0.005turn);
-	background-color: #6e468f;
 }
 
-.card2 {
-	color: #fff;
-	border-radius: 10px 10px 0 0;
-	height: 70px;
-	width: 200px;
+.card {
+	margin-top: 15px;
+	display: flex;
+	position: relative;
 	background-color: black;
+	width: 300px;
+	height: 100px;
+	border-radius: 15px 15px 0 0px;
+}
+
+.card::before {
 	position: absolute;
-	> span {
-		position: relative;
-		top: 14px;
-		left: 20px;
-		font-size: 10px;
-		font-weight: 100;
-	}
+	right: 0;
+	top: -5px;
+	left: 0;
+	margin: auto;
+	content: '';
+	justify-content: center;
+	height: auto;
+	width: auto;
+	background-color: #6e468f;
 }

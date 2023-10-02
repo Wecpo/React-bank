@@ -1,0 +1,77 @@
+.purpleButton {
+	margin: 15px 5px 15px 5px;
+	background-color: #6e468f;
+	border: none;
+	width: 130px;
+	color: #fff;
+	font-size: 14px;
+	height: 40px;
+	border-radius: 50px;
+	&:hover {
+		cursor: pointer;
+		text-decoration: underline;
+	}
+	> span {
+		&:hover {
+			cursor: pointer;
+			text-decoration: underline;
+		}
+		display: inline-flex;
+		align-items: center;
+		background-color: #6e468f;
+		align-items: center;
+		> svg {
+			margin-left: 10px;
+			background-color: #6e468f;
+		}
+	}
+}
+
+.redButton {
+	margin: 15px 5px 15px 5px;
+	background-color: #f7e2e0;
+	border: none;
+	width: 130px;
+	color: rgb(226, 88, 64);
+	font-size: 14px;
+	height: 40px;
+	border-radius: 50px;
+	> span {
+		&:hover {
+			cursor: pointer;
+			text-decoration: underline;
+		}
+		background-color: #f7e2e0;
+		display: inline-flex;
+		align-items: center;
+		> svg {
+			margin-left: 10px;
+			background-color: #f7e2e0;
+		}
+	}
+}
+
+.grayButton {
+	margin: 15px 5px 15px 5px;
+	background-color: gray;
+	border: none;
+	width: 130px;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 100;
+	height: 40px;
+	border-radius: 50px;
+	> span {
+		&:hover {
+			cursor: pointer;
+			text-decoration: underline;
+		}
+		background-color: gray;
+		width: 70px;
+		align-items: center;
+		> svg {
+			margin-left: 10px;
+			background-color: gray;
+		}
+	}
+}

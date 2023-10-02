@@ -1,14 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400&display=swap');
+
 * {
 	margin: 0;
 	padding: 0;
 	font-family: 'Urbanist', sans-serif;
+	background-color: rgb(241, 239, 239);
 }
 
-.app {
+.top {
 	padding: 5px;
-
 	display: inline-flex;
-	background-color: rgb(241, 239, 239);
+
 	align-items: center;
 	justify-content: space-between;
+}
+
+.left {
+	background-color: #fff;
+	border-radius: 15px;
+	padding: 5px;
+	margin-left: 10px;
+	display: block;
+	width: 350px;
 }

@@ -1,6 +1,50 @@
+.main {
+	padding: 0px;
+	margin: 0px;
+	background-color: #fff;
+}
+
 .header {
-	background-color: aquamarine;
-	width: 300px;
+	background-color: #fff;
+	margin-top: 15px;
+	padding: 5px 10px 5px 10px;
 	display: flex;
 	justify-content: space-between;
+
+	div:first-child {
+		background-color: #fff;
+		color: gray;
+		font-size: 20px;
+	}
+
+	div:last-child {
+		background-color: #fff;
+		color: #6e468f;
+		font-size: 20px;
+	}
+}
+
+.buttons {
+	background-color: #fff;
+}
+
+.card {
+	background-color: #fff;
+	justify-content: right;
+	vertical-align: top;
+	padding: 5px;
+}
+
+.addOrRemoveCard {
+	margin-top: 20px;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+
+	> button {
+		&:hover {
+			cursor: pointer;
+			text-decoration: underline;
+		}
+	}
 }

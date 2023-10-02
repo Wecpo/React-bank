@@ -6,12 +6,12 @@ import Profile from './components/profile/Profile'
 const App = () => {
 	return (
 		<>
-			<div className='app'>
+			<div className='top'>
 				<Layout />
 				<Profile />
 				<Menu />
 			</div>
-			<div>
+			<div className='left'>
 				<CardMenu />
 			</div>
 		</>

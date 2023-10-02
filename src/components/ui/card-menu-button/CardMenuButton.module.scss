@@ -1,0 +1,40 @@
+.button {
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	padding: 4px;
+	margin-top: 8px;
+	width: 330px;
+	border: none;
+	background-color: #fff;
+	&:hover {
+		cursor: pointer;
+		text-decoration: underline;
+	}
+}
+
+.icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 28px;
+	background-color: rgb(241, 239, 239);
+	border-radius: 50px;
+	height: 33px;
+	width: 35px;
+}
+
+.content {
+	margin-left: 15px;
+	background-color: #fff;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	right: 50px;
+	font-weight: 500;
+}
+
+.arrow {
+	background-color: #fff;
+	margin-left: auto;
+}
