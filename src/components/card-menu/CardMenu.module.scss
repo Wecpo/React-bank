@@ -6,7 +6,7 @@
 
 .header {
 	background-color: #fff;
-	margin-top: 15px;
+	margin: 15px 10px 0 10px;
 	padding: 5px 10px 5px 10px;
 	display: flex;
 	justify-content: space-between;
@@ -14,13 +14,13 @@
 	div:first-child {
 		background-color: #fff;
 		color: gray;
-		font-size: 20px;
+		font-size: 16px;
 	}
 
 	div:last-child {
 		background-color: #fff;
 		color: #6e468f;
-		font-size: 20px;
+		font-size: 16px;
 	}
 }
 
@@ -37,7 +37,8 @@
 }
 
 .addOrRemoveCard {
-	margin-top: 20px;
+	margin-top: 25px;
+	margin-bottom: 5px;
 	background-color: #fff;
 	display: flex;
 	justify-content: center;
