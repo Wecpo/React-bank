@@ -22,7 +22,10 @@ const CardMenu = () => {
 				<div>Cards</div>
 				<div>Show All</div>
 			</div>
-			<Card />
+			<div className={styles.card}>
+				<Card />
+			</div>
+
 			<div className={styles.buttons}>
 				<CardMenuButton
 					children={'Show Card Details'}

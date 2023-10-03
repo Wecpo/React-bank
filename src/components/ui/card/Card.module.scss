@@ -1,29 +1,89 @@
 .container {
-	display: flex;
+	margin: 15px;
+	display: block;
 	justify-content: center;
-	padding: 6px;
 	position: relative;
+	background-color: #fff;
 }
 
 .card {
-	margin-top: 15px;
-	display: flex;
+	display: grid;
 	position: relative;
 	background-color: black;
 	width: 300px;
-	height: 100px;
+	height: 120px;
 	border-radius: 15px 15px 0 0px;
+	border-bottom: 1px solid black;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
-.card::before {
-	position: absolute;
-	right: 0;
-	top: -5px;
-	left: 0;
-	margin: auto;
+.cardName {
+	margin-top: 10px;
+	background-color: black;
+	color: #fff;
+	margin-left: 25px;
+	width: 100px;
+}
+
+// Master-card logo
+.cardName::before {
+	position: relative;
 	content: '';
-	justify-content: center;
-	height: auto;
-	width: auto;
+	display: block;
+	width: 14px;
+	height: 14px;
+	top: 18px;
+	border-radius: 10px;
+	left: 220px;
+	background-color: rgb(255, 214, 31);
+	opacity: 0.8;
+}
+
+.cardName::after {
+	position: relative;
+	content: '';
+	display: block;
+	width: 14px;
+	height: 14px;
+	border-radius: 10px;
+	left: 210px;
+	top: -15px;
+	background-color: rgb(250, 17, 17);
+	opacity: 0.8;
+}
+
+.cardNumber {
+	background-color: black;
+	color: #fff;
+	width: 250px;
+	margin-left: 25px;
+	letter-spacing: 5px;
+	align-items: center;
+
+	//CVV code
+	> div {
+		display: inline-flex;
+		position: relative;
+		align-items: center;
+		justify-content: center;
+		left: 25px;
+		background-color: rgb(53, 52, 52);
+		width: 50px;
+		height: 22px;
+		font-size: 11px;
+		letter-spacing: 1px;
+		border-radius: 50px;
+	}
+}
+
+.secondCard {
+	display: flex;
+	position: relative;
 	background-color: #6e468f;
+	top: 12px;
+	left: 18px;
+	width: 260px;
+	height: 30px;
+	transform: rotate(-2deg);
+	border-radius: 15px 15px 0 0px;
 }

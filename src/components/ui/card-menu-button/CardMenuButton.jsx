@@ -1,3 +1,4 @@
+import Card from '../card/Card'
 import styles from './CardMenuButton.module.scss'
 import { MdArrowForwardIos } from 'react-icons/md'
 
@@ -8,7 +9,7 @@ const CardMenuButton = ({ children, icon, handler }) => {
 			<div className={styles.content}>{children}</div>
 			<div className={styles.arrow}>
 				<MdArrowForwardIos style={{ backgroundColor: '#fff' }} />
-			</div>
+			</div> 
 		</button>
 	)
 }

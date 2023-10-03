@@ -1,3 +1,4 @@
+import Card from '../ui/card/Card'
 import styles from './Profile.module.scss'
 
 const Profile = ({
