@@ -53,7 +53,7 @@
 
 .grayButton {
 	margin: 15px 5px 15px 5px;
-	background-color: gray;
+	background-color: rgb(238, 238, 238);
 	border: none;
 	width: 130px;
 	color: #fff;
@@ -61,17 +61,19 @@
 	font-weight: 100;
 	height: 40px;
 	border-radius: 50px;
+	color: black;
 	> span {
 		&:hover {
 			cursor: pointer;
 			text-decoration: underline;
 		}
-		background-color: gray;
+		background-color: rgb(238, 238, 238);
 		width: 70px;
+		display: inline-flex;
 		align-items: center;
 		> svg {
 			margin-left: 10px;
-			background-color: gray;
+			background-color: rgb(238, 238, 238);
 		}
 	}
 }

@@ -1,0 +1,56 @@
+.container {
+	margin-left: 20px;
+	background-color: black;
+	border-radius: 15px;
+
+	> img {
+		background-color: black;
+		width: 365px;
+		height: 130px;
+		border-radius: 15px;
+	}
+
+	> div {
+		background-color: transparent;
+		position: relative;
+		color: #e0e0e0;
+		top: -57px;
+		left: 50px;
+	}
+
+	> span {
+		padding-left: 25px;
+		display: flex;
+		align-items: center;
+		position: relative;
+		background-color: rgb(83, 81, 81);
+		color: white;
+		font-size: 14px;
+		letter-spacing: 2px;
+		border-radius: 25px;
+		width: 280px;
+		height: 40px;
+		top: -25px;
+		left: 30px;
+
+		div {
+			&:hover {
+				cursor: pointer;
+				opacity: 0.3;
+			}
+
+			margin-left: 60px;
+			background-color: black;
+			width: 30px;
+			height: 30px;
+			border-radius: 15px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			> svg {
+				background-color: transparent;
+			}
+		}
+	}
+}

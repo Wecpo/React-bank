@@ -5,6 +5,11 @@
 	padding: 0;
 	font-family: 'Urbanist', sans-serif;
 	background-color: rgb(241, 239, 239);
+	max-width: 1600px;
+}
+
+.container {
+	display: grid;
 }
 
 .top {
@@ -23,4 +28,12 @@
 	margin-left: 30px;
 	display: block;
 	width: 350px;
+}
+
+.body {
+	position: relative;
+	width: auto;
+	top: -520px;
+	left: 420px;
+	display: inline-flex;
 }
