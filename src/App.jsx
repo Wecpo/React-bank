@@ -1,10 +1,12 @@
-import Balance from './components/balance/Balance'
 import CardMenu from './components/card-menu/CardMenu'
 import Layout from './components/layout/Layout'
 import Menu from './components/menu/Menu'
+import PendingMoney from './components/pending-money/PendingMoney'
 import Profile from './components/profile/Profile'
-import Referral from './components/referral/Referral'
-import Card from './components/ui/card/Card'
+import RecentContacts from './components/recent-contacts/RecentContacts'
+import Referral from './components/referral-code/Referral'
+import TotalBalance from './components/total-balance/TotalBalance'
+import TransactionsHistory from './components/transactions-history/TransactionsHistory'
 
 const App = () => {
 	return (
@@ -16,10 +18,13 @@ const App = () => {
 			</div>
 			<div className='left'>
 				<CardMenu />
+				<PendingMoney />
 			</div>
 			<div className='body'>
-				<Balance />
+				<TotalBalance />
 				<Referral />
+				<RecentContacts />
+				<TransactionsHistory />
 			</div>
 		</div>
 	)

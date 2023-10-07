@@ -1,12 +1,12 @@
 import ActionButton from '../ui/actionButton/ActionButton'
-import styles from './Balance.module.scss'
+import styles from './TotalBalance.module.scss'
 import {
 	AiOutlineArrowUp,
 	AiOutlineArrowDown,
 	AiOutlinePlus
 } from 'react-icons/ai'
 
-const Balance = ({ balance = `29,475.00` }) => {
+const TotalBalance = ({ balance = `29,475.00` }) => {
 	const formatBalance = balance => {
 		console.log(balance.split(' ').join('-'))
 	}
@@ -34,4 +34,4 @@ const Balance = ({ balance = `29,475.00` }) => {
 	)
 }
 
-export default Balance
+export default TotalBalance
