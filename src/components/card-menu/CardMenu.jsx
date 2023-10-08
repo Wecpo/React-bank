@@ -10,6 +10,7 @@ import {
 	AiOutlinePlus
 } from 'react-icons/ai'
 import { CgPassword } from 'react-icons/cg'
+import Header from '../ui/header/Header'
 
 const CardMenu = () => {
 	const onClick = () => {
@@ -18,10 +19,7 @@ const CardMenu = () => {
 
 	return (
 		<div className={styles.main}>
-			<div className={styles.header}>
-				<div>Cards</div>
-				<div>Show All</div>
-			</div>
+			<Header name={'Cards'} link={{ name: 'Show All', to: 'asd123' }} />
 			<div className={styles.card}>
 				<Card />
 			</div>

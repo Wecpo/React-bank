@@ -37,6 +37,7 @@
 			&:hover {
 				cursor: pointer;
 				opacity: 0.3;
+				transition: opacity 0.3s;
 			}
 
 			margin-left: 60px;

@@ -11,6 +11,10 @@
 	position: relative;
 	background-color: black;
 	width: 300px;
+	background-image: url('../../../../public/card\ background-image.png');
+	background-repeat: no-repeat;
+	background-position: -10px -49px;
+	background-size: 300px;
 	height: 120px;
 	border-radius: 15px 15px 0 0px;
 	border-bottom: 1px solid black;
@@ -59,6 +63,10 @@
 	margin-left: 25px;
 	letter-spacing: 5px;
 	align-items: center;
+	background-image: url('../../../../public/card\ background-image.png');
+	background-repeat: no-repeat;
+	background-position: -40px -145px;
+	background-size: 300px;
 
 	//CVV code
 	> div {

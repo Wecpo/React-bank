@@ -1,7 +1,7 @@
 import ContactIcon from '../ui/contact-icon/ContactIcon'
 import styles from './RecentContacts.module.scss'
-import { AvatarGenerator } from 'random-avatar-generator'
 import { users } from './users.data'
+import Header from '../ui/header/Header'
 
 const RecentContacts = () => {
 	const formatName = name => {
@@ -10,10 +10,10 @@ const RecentContacts = () => {
 
 	return (
 		<div className={styles.container}>
-			<div className={styles.header}>
-				<div>Recent contacts</div>
-				<div>All Contacts</div>
-			</div>
+			<Header
+				name='Recent Contacts'
+				link={{ name: 'All Contacts', to: '/all-contacts' }}
+			/>
 			<div className={styles.users}>
 				<ContactIcon type='add' />
 				{users.map(user => (

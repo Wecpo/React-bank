@@ -1,4 +1,5 @@
 import ActionButton from '../ui/actionButton/ActionButton'
+import Header from '../ui/header/Header'
 import styles from './TotalBalance.module.scss'
 import {
 	AiOutlineArrowUp,
@@ -13,7 +14,7 @@ const TotalBalance = ({ balance = `29,475.00` }) => {
 
 	return (
 		<div className={styles.container}>
-			<div className={styles.header}>Total balance</div>
+			<Header name='Total Balance' />
 			<div className={styles.balance}>
 				{balance} <span>USD</span>
 			</div>

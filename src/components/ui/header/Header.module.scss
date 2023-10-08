@@ -1,0 +1,18 @@
+.header {
+	padding: 25px 25px 0px 25px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.name {
+	color: gray;
+}
+
+.link {
+	color: rgb(90, 12, 90);
+
+	&:hover {
+		cursor: pointer;
+		text-decoration: underline;
+	}
+}
