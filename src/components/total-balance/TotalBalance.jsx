@@ -8,10 +8,6 @@ import {
 } from 'react-icons/ai'
 
 const TotalBalance = ({ balance = `29,475.00` }) => {
-	const formatBalance = balance => {
-		console.log(balance.split(' ').join('-'))
-	}
-
 	return (
 		<div className={styles.container}>
 			<Header name='Total Balance' />

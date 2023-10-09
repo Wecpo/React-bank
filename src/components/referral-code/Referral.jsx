@@ -1,7 +1,10 @@
+import { useState } from 'react'
 import styles from './Referral.module.scss'
 import { AiOutlineCopy } from 'react-icons/ai'
 
 const Referral = ({ name = 'Maksim Senin' }) => {
+	const [isInClipBoard, setIsInClipBoard] = useState(false)
+
 	const currentDateForRefCode =
 		'-' +
 		new Date().toLocaleString('en', { month: 'short' }).toUpperCase() +
@@ -14,14 +17,22 @@ const Referral = ({ name = 'Maksim Senin' }) => {
 
 	const refCode = nameForRefCode(name) + currentDateForRefCode
 
+	const toClipBoard = async () => {
+		await navigator.clipboard.writeText(refCode)
+		setIsInClipBoard(true)
+	}
+
 	return (
 		<div className={styles.container}>
-			<img src='../../../public/people.png' alt='zdes doljna bit kartinka' />
+			<img
+				src='../../../public/people.png'
+				alt='there should be a picture here'
+			/>
 			<div>Invite a friend with code below and</div>
 			<div>redeem special bonus USD 15 from us!</div>
 			<span>
-				{refCode}
-				<div>
+				{isInClipBoard ? 'COPIED!' : refCode}
+				<div onClick={() => toClipBoard()}>
 					<AiOutlineCopy />
 				</div>
 			</span>

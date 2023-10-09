@@ -4,16 +4,13 @@
 	margin: 0;
 	padding: 0;
 	font-family: 'Urbanist', sans-serif;
-	max-width: 1600px;
-}
-
-html {
-	max-width: 1600px;
 }
 
 .container {
 	background-color: rgb(241, 239, 239);
 	display: grid;
+	max-width: 1600px;
+	min-width: 1300px;
 }
 
 .top {
@@ -29,13 +26,13 @@ html {
 	border-radius: 15px;
 	margin-left: 30px;
 	display: block;
-	width: 357px;
+	width: 337px;
 }
 
 .body {
 	position: relative;
-	left: 420px;
-	top: -670px;
+	left: 400px;
+	top: -707px;
 	width: 900px;
 	display: flex;
 	flex-flow: row wrap;

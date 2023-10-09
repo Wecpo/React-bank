@@ -26,6 +26,14 @@
 	flex-direction: column;
 	justify-content: center;
 
+	&:hover {
+		cursor: pointer;
+
+		> span {
+			text-decoration: underline;
+		}
+	}
+
 	> div {
 		display: flex;
 		flex-direction: column;
