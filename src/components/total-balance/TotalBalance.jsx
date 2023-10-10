@@ -7,12 +7,23 @@ import {
 	AiOutlinePlus
 } from 'react-icons/ai'
 
-const TotalBalance = ({ balance = `29,475.00` }) => {
+const TotalBalance = ({ balance = `23993` }) => {
+	const formatBalance = new Intl.NumberFormat('en-US', {
+		style: 'currency',
+		currency: 'USD',
+		signDisplay: 'never'
+	})
+
+	const formattedBalance = formatBalance
+		.format(balance)
+		.slice(1, formatBalance.length)
+
 	return (
 		<div className={styles.container}>
 			<Header name='Total Balance' />
 			<div className={styles.balance}>
-				{balance} <span>USD</span>
+				{formattedBalance}
+				<span>USD</span>
 			</div>
 			<div className={styles.buttons}>
 				<ActionButton
