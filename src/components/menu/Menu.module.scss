@@ -4,14 +4,14 @@
 	align-items: center;
 	justify-content: space-between;
 	font-size: 13px;
-	padding: 10px 50px 10px 50px;
+	padding: 10px 10px 10px 50px;
 	border-radius: 50px;
 	margin: 10px 10px;
-	width: 750px;
+	width: 758px;
 	height: 35px;
-
+	font-weight: 600;
 	> div {
-		padding: 10px 50px 10px 10px;
+		padding: 10px 40px 10px 10px;
 		background-color: #fff;
 		&:hover {
 			cursor: pointer;
