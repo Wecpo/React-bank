@@ -18,13 +18,13 @@ const App = () => {
 			</div>
 			<div className='left'>
 				<CardMenu />
-				{/* <PendingMoney /> */}
+				<PendingMoney />
 			</div>
 			<div className='body'>
 				<TotalBalance />
 				<Referral />
 				<RecentContacts />
-				{/* <TransactionsHistory /> */}
+				<TransactionsHistory />
 			</div>
 		</div>
 	)
