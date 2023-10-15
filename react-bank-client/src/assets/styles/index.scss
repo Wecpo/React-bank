@@ -6,6 +6,13 @@
 	font-family: 'Urbanist', sans-serif;
 }
 
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(241, 239, 239);
+}
+
 .container {
 	background-color: rgb(241, 239, 239);
 	display: grid;
