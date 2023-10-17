@@ -2,30 +2,44 @@ import { useForm } from 'react-hook-form'
 import styles from './AuthPage.module.scss'
 import { useState } from 'react'
 import Logo from '../ui/logo/Logo'
+import authService from '../../services/auth.service'
+import { $axios } from '../../services/axios'
 
 const AuthPage = () => {
-	const [signType, setSignType] = useState(true)
+	const [signType, setSignType] = useState('signUp')
 	const {
 		register,
 		handleSubmit,
-		formState: { errors }
+		formState: { errors },
+		reset
 	} = useForm()
+
 	const onSubmit = data => {
-		console.log(data)
+		authService.main(data.email, data.password, signType)
+		reset()
+	}
+
+	async function getUsers() {
+		try {
+			const { data } = await $axios.get(`/users/getAll`)
+			console.log(data)
+			return data
+		} catch (error) {
+			console.log(error)
+		}
 	}
 
 	return (
 		<div className={styles.container}>
 			<Logo />
-
-			<h1>{!signType ? 'Sign In' : 'Sign Up'}</h1>
+			<h1>{signType === 'signIn' ? 'Sign In' : 'Sign Up'}</h1>
 			<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-				LOGIN
+				EMAIL
 				<input
 					className={styles.input}
-					{...register('login', { required: true })}
+					{...register('email', { required: true })}
 				/>
-				{errors.login && (
+				{errors.email && (
 					<span className={styles.error}>This field is required</span>
 				)}
 				PASSWORD
@@ -45,9 +59,13 @@ const AuthPage = () => {
 
 					<span
 						className={styles.authToggleSpan}
-						onClick={() => setSignType(prevState => !prevState)}
+						onClick={() =>
+							setSignType(prevState =>
+								prevState === 'signIn' ? 'signUp' : 'signIn'
+							)
+						}
 					>
-						{signType ? 'Sign In' : 'Sign Up'}
+						{signType === 'signUp' ? 'Sign In' : 'Sign Up'}
 					</span>
 				</span>
 			</form>
