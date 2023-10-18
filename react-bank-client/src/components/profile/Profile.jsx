@@ -1,9 +1,6 @@
 import styles from './Profile.module.scss'
 
-const Profile = ({
-	name = 'Jelly',
-	avatarPath = '../../../public/avatar.jpg'
-}) => {
+const Profile = ({ name = 'Jelly', avatarPath = '/avatar.jpg' }) => {
 	return (
 		<div className={styles.profile}>
 			<p>

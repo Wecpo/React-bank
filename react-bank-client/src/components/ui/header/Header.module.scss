@@ -3,6 +3,19 @@
 	display: flex;
 	justify-content: space-between;
 	font-weight: 500;
+	align-items: center;
+	overflow: visible;
+}
+
+.headerWithCalendar {
+	padding: 25px 25px 0px 25px;
+	display: flex;
+	justify-content: space-between;
+	font-weight: 500;
+	align-items: center;
+	overflow: visible;
+	width: 770px;
+	margin-bottom: 5px;
 }
 
 .name {
@@ -16,4 +29,61 @@
 		cursor: pointer;
 		text-decoration: underline;
 	}
+}
+
+.dateRange {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+	span {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		color: gray;
+		background-color: rgb(241, 240, 240);
+		padding: 4px 5px 4px 30px;
+		border-radius: 50px;
+		font-size: 14px;
+
+		svg {
+			cursor: pointer;
+			background-color: #fff;
+			border-radius: 50px;
+			width: 20px;
+			height: auto;
+			padding: 8px;
+			color: black;
+			margin-left: 40px;
+
+			&:hover {
+				background-color: gray;
+				transition: background-color 0.6s;
+			}
+		}
+	}
+
+	> svg {
+		margin-left: 10px;
+		background-color: #6e468f;
+		width: 16px;
+		padding: 11px;
+		border-radius: 50%;
+		color: #fff;
+		cursor: pointer;
+		&:hover {
+			background-color: #270741;
+			transition: background-color 0.6s;
+		}
+	}
+}
+
+.calendar {
+	position: absolute;
+	z-index: 9999;
+	top: 438px;
+	left: 390px;
+	background-color: #dadada;
+	border-radius: 25px;
 }

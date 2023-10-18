@@ -1,3 +1,4 @@
+import { formatCurrency } from '../../utils/formatCurrency'
 import ActionButton from '../ui/actionButton/ActionButton'
 import Header from '../ui/header/Header'
 import styles from './TotalBalance.module.scss'
@@ -8,15 +9,9 @@ import {
 } from 'react-icons/ai'
 
 const TotalBalance = ({ balance = `23993` }) => {
-	const formatBalance = new Intl.NumberFormat('en-US', {
-		style: 'currency',
-		currency: 'USD',
-		signDisplay: 'never'
-	})
-
-	const formattedBalance = formatBalance
+	const formattedBalance = formatCurrency
 		.format(balance)
-		.slice(1, formatBalance.length)
+		.slice(1, formatCurrency.length)
 
 	return (
 		<div className={styles.container}>

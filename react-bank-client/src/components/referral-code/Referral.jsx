@@ -24,10 +24,7 @@ const Referral = ({ name = 'Maksim Senin' }) => {
 
 	return (
 		<div className={styles.container}>
-			<img
-				src='../../../public/people.png'
-				alt='there should be a picture here'
-			/>
+			<img src=' /people.png' alt='there should be a picture here' />
 			<div>Invite a friend with code below and</div>
 			<div>redeem special bonus USD 15 from us!</div>
 			<span>
