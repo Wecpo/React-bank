@@ -1,9 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom'
-import App from '../App'
-import AuthPage from '../components/auth/AuthPage'
+import AuthPage from '../components/screens/auth-page/AuthPage'
+import MainPage from '../components/screens/main-page/MainPage'
 
 const router = createBrowserRouter([
-	{ path: '/', element: <App /> },
+	{ path: '/', element: <MainPage /> },
 	{
 		path: '/auth',
 		element: <AuthPage />

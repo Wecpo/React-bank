@@ -9,7 +9,7 @@ const Menu = () => {
 					<div
 						style={
 							route.name === 'Summary'
-								? { fontWeight: '500' }
+								? { fontWeight: '600' }
 								: { color: 'gray' }
 						}
 						key={route.name[0]}

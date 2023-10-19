@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styles from './Header.module.scss'
 import { AiOutlineCalendar, AiOutlineArrowRight } from 'react-icons/ai'
-import RangeCalendar from '../day-picker/RangeCalendar'
+import RangeCalendar from '../range-calendar/RangeCalendar'
 
 const Header = ({
 	name,
@@ -9,7 +9,7 @@ const Header = ({
 	calendar = '',
 	range,
 	setRange,
-	currentMonth
+	currentDate
 }) => {
 	const [isShowCalendar, setIsShowCalendar] = useState(false)
 
@@ -29,7 +29,7 @@ const Header = ({
 							<RangeCalendar
 								range={range}
 								setRange={setRange}
-								currentMonth={currentMonth}
+								currentDate={currentDate}
 							/>
 						</div>
 					)}

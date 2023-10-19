@@ -2,12 +2,12 @@ import { DayPicker } from 'react-day-picker'
 import 'react-day-picker/dist/style.css'
 import './day-picker.css'
 
-const RangeCalendar = ({ range, setRange, currentMonth }) => {
+const RangeCalendar = ({ range, setRange, currentDate }) => {
 	return (
 		<DayPicker
 			id='test'
 			mode='range'
-			defaultMonth={currentMonth}
+			defaultMonth={currentDate}
 			selected={range}
 			onSelect={setRange}
 		/>

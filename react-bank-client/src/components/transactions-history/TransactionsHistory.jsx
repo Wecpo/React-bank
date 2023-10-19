@@ -2,18 +2,17 @@ import Header from '../ui/header/Header'
 import styles from './TransactionsHistory.module.scss'
 import { transactions } from './transactions.data'
 import { useState } from 'react'
-import { addDays } from 'date-fns'
-import { da } from 'date-fns/locale'
+import { addDays, subDays } from 'date-fns'
 import { formatCurrency } from '../../utils/formatCurrency'
 
-const currentMonth = new Date()
+const currentDate = new Date()
 
 const TransactionsHistory = () => {
 	const transactions1 = transactions
 
 	const defaultSelected = {
-		from: new Date(),
-		to: addDays(currentMonth, 4)
+		from: subDays(new Date(), 4),
+		to: addDays(currentDate, 1)
 	}
 
 	const [range, setRange] = useState(defaultSelected)
@@ -59,7 +58,7 @@ const TransactionsHistory = () => {
 				calendar='true'
 				range={range}
 				setRange={setRange}
-				currentMonth={currentMonth}
+				currentDate={currentDate}
 			/>
 			<div className={styles.transactions}>
 				{filteredTransactions.map(transaction => (

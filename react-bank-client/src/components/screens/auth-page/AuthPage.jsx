@@ -1,9 +1,8 @@
 import { useForm } from 'react-hook-form'
 import styles from './AuthPage.module.scss'
 import { useState } from 'react'
-import Logo from '../ui/logo/Logo'
-import authService from '../../services/auth.service'
-import { $axios } from '../../services/axios'
+import Logo from '../../ui/logo/Logo'
+import authService from '../../../services/auth.service'
 
 const AuthPage = () => {
 	const [signType, setSignType] = useState('signUp')
@@ -17,16 +16,6 @@ const AuthPage = () => {
 	const onSubmit = data => {
 		authService.main(data.email, data.password, signType)
 		reset()
-	}
-
-	async function getUsers() {
-		try {
-			const { data } = await $axios.get(`/users/getAll`)
-			console.log(data)
-			return data
-		} catch (error) {
-			console.log(error)
-		}
 	}
 
 	return (
