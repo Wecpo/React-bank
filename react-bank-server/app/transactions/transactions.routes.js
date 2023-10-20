@@ -1,9 +1,9 @@
 import express from 'express'
-import { getUsers } from './transactions.controller.js'
 import { protect } from '../middleware/auth.middleware.js'
+import { createTransaction } from './transactions.controller.js'
 
 const router = express.Router()
 
-router.route('/getAll').get(protect, getUsers)
+router.route('/createTransaction').post(protect, createTransaction)
 
 export default router

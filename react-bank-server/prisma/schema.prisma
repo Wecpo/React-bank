@@ -14,17 +14,38 @@ model User {
   password     String
   createdAt    DateTime      @default(now()) @map("created_at")
   updatedAt    DateTime      @updatedAt @map("updated_at")
-  images       String        
+  images       String 
+  cards        Card[]
+  transcactions Transaction[]
+
+  @@map("users")
+}
+
+model Card {
+  id           Int           @id @default(autoincrement())
+  owner_id     Int 
+  number       String        @unique
+  cvv          String
+  paySystem    String        @default("master-card")
+  createdAt    DateTime      @default(now()) @map("created_at")
+  updatedAt    DateTime      @updatedAt @map("updated_at")
+  owner        User          @relation(fields: [owner_id], references: [id])
+ 
+  @@map("cards")
 }
 
 model Transaction {
   id           Int           @id @default(autoincrement())
   from         String
   to           String 
-  message      String
+  message      String        
   amount       Int
+  maker_id     Int
+  maker        User          @relation(fields: [maker_id], references: [id])
   createdAt    DateTime      @default(now()) @map("created_at")
   updatedAt    DateTime      @updatedAt @map("updated_at")
+ 
+  @@map("trasactions")
  }
 
 

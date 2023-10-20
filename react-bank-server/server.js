@@ -6,6 +6,7 @@ import morgan from 'morgan'
 import { prisma } from './app/prisma.js'
 import authRoutes from './app/auth/auth.routes.js'
 import usersRoutes from './app/users/users.routes.js'
+import transactionsRoutes from './app/transactions/transactions.routes.js'
 // import { errorHandler, notFound } from './app/middleware/error.middleware.js'
 
 const app = express()
@@ -21,6 +22,7 @@ async function main() {
 	// app.use('/uploads', express.static(path.join(__dirname, '/uploads/')))
 	app.use('/api/auth', authRoutes)
 	app.use('/api/users', usersRoutes)
+	app.use('/api/transactions', transactionsRoutes)
 	// app.use('/api/exercises', exerciseRoutes)
 	// app.use('/api/workouts', workoutRoutes)
 
