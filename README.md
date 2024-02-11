@@ -2,8 +2,8 @@
 
 Frontend приложение с небольшим бэкендом.
 
-Frontend - react, javascript, react-router, react-day-picker, react-hook-form, react-icons, sass.
+Frontend - react, javascript, react-router, react-day-picker, react-hook-form, react-icons, sass.<br>
 Backend - express, postgre, prisma orm.
 
-yarn;
-yarn dev;
+yarn<br>
+yarn dev 
